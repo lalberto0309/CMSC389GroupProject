@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Quiz 1</title>
+</head>
+
+<body>
+	<h1><strong><u>Quiz 1</u></strong></h1>
+	<form onsubmit="return main()">
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question1" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question1"value="b"><br/><br/>
+		Answer C <input type="radio" name="question1"value="c"><br/><br/>
+		Answer D <input type="radio" name="question1"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question2" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question2"value="b"><br/><br/>
+		Answer C <input type="radio" name="question2"value="c"><br/><br/>
+		Answer D <input type="radio" name="question2"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question3" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question3"value="b"><br/><br/>
+		Answer C <input type="radio" name="question3"value="c"><br/><br/>
+		Answer D <input type="radio" name="question3"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question4" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question4"value="b"><br/><br/>
+		Answer C <input type="radio" name="question4"value="c"><br/><br/>
+		Answer D <input type="radio" name="question4"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question5" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question5"value="b"><br/><br/>
+		Answer C <input type="radio" name="question5"value="c"><br/><br/>
+		Answer D <input type="radio" name="question5"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question6" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question6"value="b"><br/><br/>
+		Answer C <input type="radio" name="question6"value="c"><br/><br/>
+		Answer D <input type="radio" name="question6"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question7" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question7"value="b"><br/><br/>
+		Answer C <input type="radio" name="question7"value="c"><br/><br/>
+		Answer D <input type="radio" name="question7"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question8" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question8"value="b"><br/><br/>
+		Answer C <input type="radio" name="question8"value="c"><br/><br/>
+		Answer D <input type="radio" name="question8"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question9" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question9"value="b"><br/><br/>
+		Answer C <input type="radio" name="question9"value="c"><br/><br/>
+		Answer D <input type="radio" name="question9"value="d"><br/><br/>
+		<br/><br/><br/><br/>
+		
+		<img src="" alt="Q Image"><br/><br/>
+		[Question Text?]<br/><br/>
+		Answer A <input type="radio" name="question10" checked value="a"><br/><br/>
+		Answer B <input type="radio" name="question10"value="b"><br/><br/>
+		Answer C <input type="radio" name="question10"value="c"><br/><br/>
+		Answer D <input type="radio" name="question10"value="d"><br/><br/>
+		<br/><br/>
+		<input type="submit" value = "Calculate Your Results">
+	</form> 
+	<div id="results"></div>
+	<script>
+		let aBucket = 0;
+		let bBucket = 0;
+		let cBucket = 0;
+		let dBucket = 0;
+		
+		function main() {
+			addResult("question1");
+			addResult("question2");
+			addResult("question3");
+			addResult("question4");
+			addResult("question5");
+			addResult("question6");
+			addResult("question7");
+			addResult("question8");
+			addResult("question9");
+			addResult("question10");
+			max = maxBucket();
+			
+			if (max == aBucket) {
+				document.writeln("(A) got the most votes with "+aBucket);
+			} else if (max == aBucket) {
+				document.writeln("(B) got the most votes with "+bBucket);
+			} else if (max == aBucket) {
+				document.writeln("(C) got the most votes with "+cBucket);
+			} else if (max == dBucket) {
+				document.writeln("(D) got the most votes with "+dBucket);
+			}
+			
+		}
+		
+		function addResult(question) {
+			let answer = document.querySelector('input[name="'+question+'"]:checked').value;
+			switch(answer) {
+				case "a":
+					aBucket++;
+					break;
+				case "b":
+					bBucket++;
+					break;
+				case "c":
+					cBucket++;
+					break;
+				case "d":
+					dBucket++;
+					break;
+			}
+		}
+		
+		function maxBucket() {
+			let maxAB = (aBucket >= bBucket ? aBucket : bBucket);
+			let maxCD = (cBucket >= dBucket ? cBucket : dBucket);
+			return maxAB >= maxCD ? maxAB : maxCD;
+		}
+	</script>
+</body>
+</html>
