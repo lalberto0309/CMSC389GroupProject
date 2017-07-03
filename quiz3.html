@@ -6,7 +6,7 @@
 
 <body>
 	<h1><strong><u>Quiz 3</u></strong></h1>
-	<form onsubmit="return main()">
+	<form onsubmit="return main()" action="processQuiz.php" method="post">
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
 		Answer A <input type="radio" name="question1" checked value="a"><br/><br/>
@@ -86,6 +86,10 @@
 		Answer C <input type="radio" name="question10"value="c"><br/><br/>
 		Answer D <input type="radio" name="question10"value="d"><br/><br/>
 		<br/><br/>
+
+		<strong>Name: </strong><input type="text" id="name" name="name" placeholder="Your Name" required/><br/>
+		Email to Send Results to (Optional): <input type="email" id="email" name="email"/><br/><br/><br/>
+		<input type="hidden" name="result" id="result"/><br/>
 		<input type="submit" value = "Calculate Your Results">
 	</form> 
 	<div id="results"></div>
@@ -107,9 +111,10 @@
 			addResult("question9");
 			addResult("question10");
 			max = maxBucket();
-			
+
+			let x = document.getElementById("result");
 			if (max == aBucket) {
-				document.writeln("(A) got the most votes with "+aBucket);
+				//document.writeln("(A) got the most votes with "+aBucket);
 			} else if (max == bBucket) {
 				document.writeln("(B) got the most votes with "+bBucket);
 			} else if (max == cBucket) {
