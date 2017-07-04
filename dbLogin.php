@@ -4,4 +4,5 @@
 	$user = "dbuser";
 	$password = "goodbyeWorld";
 	$database = "fizzbuzzfeed";
+
 ?>
