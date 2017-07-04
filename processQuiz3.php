@@ -19,7 +19,7 @@ EOBUTTON;
 
     $content= <<<EOPAGE
     <div class='text-center'>
-	    <img src='data:image/jpg;base64,$image' alt=$resultName height='250' width='250'/> <br>
+	    <img src='data:image/jpg;base64,$image' alt=$resultName height='250' width='250'/> <br><br>
 	    <div class='center-block' style='width:300px'>
 	    	$resultText
 	    </div>

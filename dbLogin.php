@@ -5,4 +5,10 @@
 	$password = "goodbyeWorld";
 	$database = "fizzbuzzfeed";
 
+	/* Quiz 3
+	A -> Sublime
+	B -> Komodo
+	C -> Webstorm
+	D -> Notepad
+	*/
 ?>
