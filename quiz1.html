@@ -5,20 +5,20 @@
 </head>
 
 <body>
-	<h1><strong>Think you’re a real Programmer? Take this quiz and find out if you’re a true Binary Maestro or just another faceless CodeBoy.</strong></h1>
-	<form onsubmit="return main()">
+	<h1><strong><u>Quiz 1</u></strong></h1>
+	<form onsubmit="return main()" action="processQuiz.php" method="post">
 		<br/><br/>
 		<strong>Consider the following weapon.</strong><br/><br/>
 		<img src="Images/keyboard.jpg" alt="Q Image" width=400 height=200><br/><br/>
 		<strong>How is she called?</strong><br/><br/>
-		The Clacker <input type="radio" name="question1" checked value="a"><br/><br/>
+		The Clacker <input type="radio" name="question1" value="a"><br/><br/>
 		Old Crumb Dump <input type="radio" name="question1"value="b"><br/><br/>
 		False Prophet <input type="radio" name="question1"value="c"><br/><br/>
 		I am unfamiliar with this weapon, but I interface with many others like her <input type="radio" name="question1"value="d"><br/><br/>
 		<br/><br/><br/><br/>
 		
 		<strong>Who of these men fathered you? </strong><br/><br/>
-		<input type="radio" name="question2" checked value="b">
+		<input type="radio" name="question2" value="b">
 		<img src="Images/q2_1.jpg" alt="Q Image" width=250 height=200><br/><br/>
 		
 		<input type="radio" name="question2"value="c">
@@ -32,14 +32,14 @@
 		<br/><br/><br/><br/>
 		
 		<strong>When you have gone truly Binary Bonkers, how do you cope?</strong><br/><br/>
-		Diet soda, among other drugs. <input type="radio" name="question3" checked value="b"><br/><br/>
+		Diet soda, among other drugs. <input type="radio" name="question3" value="b"><br/><br/>
 		I do not succumb, that weakness was bred out generations ago. <input type="radio" name="question3"value="a"><br/><br/>
 		I code until I am cleansed by pain. <input type="radio" name="question3"value="c"><br/><br/>
 		I weep like the innumerable CodeBoys I despise. <input type="radio" name="question3"value="d"><br/><br/>
 		<br/><br/><br/><br/>
 		
 		<strong>When sparing with an Intolerable Loop, how are you outfitted?</strong><br/><br/>
-		Cargo shorts, Hacker’s musk, and my trusty Clacker <input type="radio" name="question4" checked value="a"><br/><br/>
+		Cargo shorts, Hacker’s musk, and my trusty Clacker <input type="radio" name="question4" value="a"><br/><br/>
 		I dress in accordance with the Man from Java. <input type="radio" name="question4"value="b"><br/><br/>
 		I do not have the strength necessary to spar with an Intolerable Loop. <input type="radio" name="question4"value="d"><br/><br/>
 		Black trench coat, a vial of AutoDebug, and my wits. <input type="radio" name="question4"value="c"><br/><br/>
@@ -47,14 +47,14 @@
 		
 		<img src="Images/q5.jpg" alt="Q Image"><br/><br/>
 		<strong>Rate you Pain.</strong><br/><br/>
-		1 <input type="radio" name="question5" checked value="b"><br/><br/>
+		1 <input type="radio" name="question5" value="b"><br/><br/>
 		6++ <input type="radio" name="question5"value="a"><br/><br/>
 		10 <input type="radio" name="question5"value="d"><br/><br/>
 		++6 <input type="radio" name="question5"value="c"><br/><br/>
 		<br/><br/><br/><br/>
 		
 		<strong>Select your birthplace.</strong><br/><br/>
-		<input type="radio" name="question6" checked value="a">
+		<input type="radio" name="question6" value="a">
 		<img src="Images/q6_1.gif" alt="Q Image" width=250 height=200><br/><br/>
 		<input type="radio" name="question6"value="c">
 		<img src="Images/q6_2.jpg" alt="Q Image" width=250 height=200><br/><br/>
@@ -65,7 +65,7 @@
 		<br/><br/><br/><br/>
 
 		<strong>When you were a young CodeBoy cutting your digital teeth in the Sun Microsystem, which childhood friend caused the most joy?</strong><br/><br/>
-		for(){} <input type="radio" name="question7" checked value="c"><br/><br/>
+		for(){} <input type="radio" name="question7" value="c"><br/><br/>
 		throw new Code() <input type="radio" name="question7"value="d"><br/><br/>
 		Initiate hack() ? yes : no<input type="radio" name="question7"value="a"><br/><br/>
 		I was never a CodeBoy.  I am constant like the Intolerable Loop. <input type="radio" name="question7"value="b"><br/><br/>
@@ -73,14 +73,14 @@
 		
 		<img src="Images/q8.jpg" alt="Q Image" width=300 height=225><br/><br/>
 		<strong>Identify this Binary Maestro.</strong><br/><br/>
-		The Man from Java <input type="radio" name="question8" checked value="b"><br/><br/>
+		The Man from Java <input type="radio" name="question8" value="b"><br/><br/>
 		My religion prevents me from answering <input type="radio" name="question8"value="a"><br/><br/>
 		The Unlucky Twin <input type="radio" name="question8"value="d"><br/><br/>
 		A known Exception <input type="radio" name="question8"value="c"><br/><br/>
 		<br/><br/><br/><br/>
 		
 		<strong>How do you spend your idle time?</strong><br/><br/>
-		Defragging the savanna, as my ancestors did 10,000 years ago. <input type="radio" name="question9" checked value="a"><br/><br/>
+		Defragging the savanna, as my ancestors did 10,000 years ago. <input type="radio" name="question9" value="a"><br/><br/>
 		I consider the world’s most famous Binary Maestro, and learn from his mistakes <input type="radio" name="question9"value="c"><br/><br/>
 		Advocating for legal assembly. <input type="radio" name="question9"value="b"><br/><br/>
 		I think of the Kernel, and weep at my inferiority.<input type="radio" name="question9"value="d"><br/><br/>
@@ -88,12 +88,18 @@
 		
 		<strong>Oh no! The Tech Giant is administering a code interview.  How do you hack this Exception?</strong><br/><br/>
 		<img src="Images/q10.jpg" alt="Q Image" width=300 height=225><br/><br/>
-		Sever it with C# <input type="radio" name="question10" checked value="a"><br/><br/>
+		Sever it with C# <input type="radio" name="question10" value="a"><br/><br/>
 		It would take at least 5 CodeBoys to hack this Exception.<input type="radio" name="question10"value="c"><br/><br/>
 		Bombard it with semi-colons until surrender  <input type="radio" name="question10"value="b"><br/><br/>
 		A Unix man like myself does not believe in Exceptions.<input type="radio" name="question10"value="d"><br/><br/>
 		<br/><br/>
-		<input type="submit" value = "Get Your Results!">
+		
+		<strong>Name: </strong><input type="text" id="name" name="name" placeholder="Your Name" required/><br/><br/>
+		Email to Send Results to (Optional): <input type="email" id="email" name="email"/><br/><br/><br/>
+		
+		<input type="submit" value = "Calculate Your Results">
+		<input type="hidden" name="result" id="result"/>
+		
 	</form> 
 	<div id="results"></div>
 	<script>
@@ -103,6 +109,35 @@
 		let dBucket = 0;
 		
 		function main() {
+			/*
+			 *	Validation Section
+			 */
+			let err = "";
+			err += addErrorMessage("question1");
+			err += addErrorMessage("question2");
+			err += addErrorMessage("question3");
+			err += addErrorMessage("question4");
+			err += addErrorMessage("question5");
+			err += addErrorMessage("question6");
+			err += addErrorMessage("question7");
+			err += addErrorMessage("question8");
+			err += addErrorMessage("question9");
+			err += addErrorMessage("question10");
+			
+			let name = document.getElementById("name").value.trim();
+			if (name === "" || !isNaN(parseFloat(name))) {
+				err += "Invalid Name Given";
+			}
+			
+			if (err !== "") {
+				alert(err);
+				return false;
+			}
+			
+			
+			/*
+			 *	Calculating Results
+			 */
 			addResult("question1");
 			addResult("question2");
 			addResult("question3");
@@ -115,15 +150,15 @@
 			addResult("question10");
 			max = maxBucket();
 			
+			let x = document.getElementById("results");
 			if (max == aBucket) {
-				document.writeln("(A) got the most votes with "+aBucket);
+				x.setAttribute("value", "A");
 			} else if (max == bBucket) {
-				document.writeln("(B) got the most votes with "+bBucket);
+				x.setAttribute("value", "B");
 			} else if (max == cBucket) {
-				document.writeln("(C) got the most votes with "+cBucket);
+				x.setAttribute("value", "C");
 			} else if (max == dBucket) {
-				document.writeln("(D) got the most votes with "+dBucket);
-
+				x.setAttribute("value", "D");
 			}
 			
 		}
@@ -150,6 +185,53 @@
 			let maxAB = (aBucket >= bBucket ? aBucket : bBucket);
 			let maxCD = (cBucket >= dBucket ? cBucket : dBucket);
 			return maxAB >= maxCD ? maxAB : maxCD;
+		}
+		
+		function notSelected(question) {
+			let answer = document.querySelector('input[name="'+question+'"]:checked');
+			return (answer === null);
+		}
+		
+		function addErrorMessage(question) {
+			if (notSelected(question)) {
+				let q = "";
+				switch(question) {
+					case "question1":
+						q += "Question 1";
+						break;
+					case "question2":
+						q += "Question 2";
+						break;
+					case "question3":
+						q += "Question 3";
+						break;
+					case "question4":
+						q += "Question 4";
+						break;
+					case "question5":
+						q += "Question 5";
+						break;
+					case "question6":
+						q += "Question 6";
+						break;
+					case "question7":
+						q += "Question 7";
+						break;
+					case "question8":
+						q += "Question 8";
+						break;
+					case "question9":
+						q += "Question 9";
+						break;
+					case "question10":
+						q += "Question 10";
+						break;
+				}
+				return q+" was NOT Answered!\n";
+			}
+			else {
+				return "";
+			}
 		}
 	</script>
 </body>
