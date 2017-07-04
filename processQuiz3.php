@@ -1,45 +1,43 @@
-<?php  
-	require_once("support1.php");
-	require_once("dbLogin.php");
+<?php
+    require_once("support1.php");
+    require_once("databaseAccess.php");
+    require_once("dbLogin.php");
 
-	//Retrieve Quiz Result
-	
+    $letter = $_POST["result"];
+    $name = $_POST["name"];
+    $retrieval = getNameAndImage("3", $letter, $host, $user, $password, $database);
+    $image = base64_encode($retrieval["image"]);
+    $resultName = $retrieval["name"];
+    
+    $body = "<img src=\"data:image/jpg;base64,$image\" alt=$resultName/><br/><br/>";
+    $body .= addText($letter, $name);
+    $body .= "<form action=\"Homepage.html\" method=\"post\">";
+	$body .= "<input type=\"submit\" value = \"Home\">";
+	$body .= "</form>";
 
-
-	$db_connection = new mysqli($host, $user, $password, $database);
-	if ($db_connection->connect_error) {
-		die($db_connection->connect_error);
-	} else {
-		echo "Connection to database established<br><br>";
-	}
-	
-	/* Query */
-	$query = "select * from quiz3";
-			
-	/* Executing query */
-	$result = $db_connection->query($query);
-	if (!$result) {
-		die("Retrieval failed: ". $db_connection->error);
-	} else {
-		/* Number of rows found */
-		$num_rows = $result->num_rows;
-		if ($num_rows === 0) {
-			echo "Empty Table<br>";
-		} else {
-			for ($row_index = 0; $row_index < $num_rows; $row_index++) {
-				$result->data_seek($row_index);
-				$row = $result->fetch_array(MYSQLI_ASSOC);
-				
-				echo "Name: {$row['name']}, Id: {$row['id']} <br>";
-			}
-		}
-	}
-	
-	/* Freeing memory */
-	$result->close();
-	
-	/* Closing connection */
-	$db_connection->close();
-
-
+    
+    
+    $page = generatePage($body);
+	echo $page;
+    
+    
+    function addText($value, $name) {
+        $txt = "<p><strong>$name, </strong>";
+        switch($value) {
+            case "A":
+                $txt .= "";
+                break;
+            case "B":
+                $txt .= "";
+                break;
+            case "C":
+                $txt .= "";
+                break;
+            case "D":
+                $txt .= "";
+                break;
+        }
+        $txt .= "</p>";
+        return $txt;
+    }
 ?>

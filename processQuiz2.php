@@ -5,7 +5,7 @@
 
     $letter = $_POST["result"];
     $name = $_POST["name"];
-    $retrieval = getNameAndImage("1", $letter, $host, $user, $password, $database);
+    $retrieval = getNameAndImage("2", $letter, $host, $user, $password, $database);
     $image = base64_encode($retrieval["image"]);
     $resultName = $retrieval["name"];
     

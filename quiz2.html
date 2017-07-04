@@ -4,98 +4,135 @@
     <title>Quiz 2</title>
 </head>
 
-<body>
-	<h1><strong><u>Quiz 2</u></strong></h1>
-	<form onsubmit="return main()">
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question1" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question1"value="b"><br/><br/>
-		Answer C <input type="radio" name="question1"value="c"><br/><br/>
-		Answer D <input type="radio" name="question1"value="d"><br/><br/>
+<body style="text-align: center;">
+	<h1><strong><u>What Kind Of NERD Are You?</u></strong></h1>
+	<form onsubmit="return main()" action="processQuiz2.php" method="post">
+		<img src="Q2Images/fridayNight.jpg" alt="Q Image"><br/><br/>
+		<strong>It's Friday Night!! What's your ideal night?</strong><br/><br/>
+		Let's Go Clubbing! And Dance the Night Away!! <input type="radio" name="question1"value="d"><br/><br/>
+		Living up the Night at House Party! <input type="radio" name="question1"value="c"><br/><br/>
+		Game Night, Have some friends over for Board Games and Video Games<input type="radio" name="question1"value="a"><br/><br/>
+		Hot Date Tonight! Just Me, my Bed, and my Laptop <input type="radio" name="question1"value="b"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question2" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question2"value="b"><br/><br/>
-		Answer C <input type="radio" name="question2"value="c"><br/><br/>
-		Answer D <input type="radio" name="question2"value="d"><br/><br/>
+		<img src="Q2Images/food.jpg" alt="Q Image"><br/><br/>
+		<strong>You're too lazy to make dinner...Where do you go dine?</strong><br/><br/>
+		Burger Place <input type="radio" name="question2"value="c"><br/><br/>
+		Chipotle <input type="radio" name="question2"value="d"><br/><br/>
+		Sushi Restaurant <input type="radio" name="question2"value="b"><br/><br/>
+		Order some Pizza....I was lazy for a reason! <input type="radio" name="question2"value="a"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question3" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question3"value="b"><br/><br/>
-		Answer C <input type="radio" name="question3"value="c"><br/><br/>
-		Answer D <input type="radio" name="question3"value="d"><br/><br/>
+		<strong>Which of these characters makes you the Happiest?</strong><br/><br/>
+		<img src="Q2Images/spiderman.jpg"><br/><br/> Spider-Man <input type="radio" name="question3"value="c"><br/><br/>
+		<img src="Q2Images/mario.jpg" height=600 width=500><br/><br/> Mario <input type="radio" name="question3"value="a"><br/><br/>
+		<img src="Q2Images/harryPotter.jpg"><br/><br/> Harry Potter <input type="radio" name="question3"value="b"><br/><br/>
+		<img src="Q2Images/batman.jpg"><br/><br/> Batman <input type="radio" name="question3"value="d"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question4" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question4"value="b"><br/><br/>
-		Answer C <input type="radio" name="question4"value="c"><br/><br/>
-		Answer D <input type="radio" name="question4"value="d"><br/><br/>
+		<img src="Q2Images/coding.jpg" alt="Q Image"><br/><br/>
+		<strong>Which Programming Language do you prefer?</strong><br/><br/>
+		Java <input type="radio" name="question4"value="c"><br/><br/>
+		Javascript <input type="radio" name="question4"value="d"><br/><br/>
+		C <input type="radio" name="question4"value="b"><br/><br/>
+		Python <input type="radio" name="question4"value="a"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question5" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question5"value="b"><br/><br/>
-		Answer C <input type="radio" name="question5"value="c"><br/><br/>
-		Answer D <input type="radio" name="question5"value="d"><br/><br/>
+		<img src="Q2Images/houseParty.jpg" alt="Q Image"><br/><br/>
+		<strong>You're at a Party, What are you Most Likely Doing?</strong><br/><br/>
+		Eating whatever Food is Available <input type="radio" name="question5"value="c"><br/><br/>
+		Drunk!! Don't care how you're getting Home! <input type="radio" name="question5"value="a"><br/><br/>
+		Dancing! <input type="radio" name="question5"value="d"><br/><br/>
+		Regretting ever leaving your bed... <input type="radio" name="question5"value="b"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question6" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question6"value="b"><br/><br/>
-		Answer C <input type="radio" name="question6"value="c"><br/><br/>
-		Answer D <input type="radio" name="question6"value="d"><br/><br/>
+		<img src="Q2Images/netflix.jpg" alt="Q Image"><br/><br/>
+		<strong>Let's Netflix and Chill...GET YOUR MIND OUT OF THE GUTTER...What are you watching?</strong><br/><br/>
+		House of Cards <input type="radio" name="question6"value="b"><br/><br/>
+		Stranger Things <input type="radio" name="question6"value="a"><br/><br/>
+		13 Reasons Why <input type="radio" name="question6"value="d"><br/><br/>
+		Orange is the New Black <input type="radio" name="question6"value="c"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question7" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question7"value="b"><br/><br/>
-		Answer C <input type="radio" name="question7"value="c"><br/><br/>
-		Answer D <input type="radio" name="question7"value="d"><br/><br/>
+		<img src="Q2Images/seasons.jpg" alt="Q Image"><br/><br/>
+		<strong>Which Season do you prefer?</strong><br/><br/>
+		Spring <input type="radio" name="question7"value="b"><br/><br/>
+		Summer <input type="radio" name="question7"value="a"><br/><br/>
+		Fall <input type="radio" name="question7"value="c"><br/><br/>
+		Winter <input type="radio" name="question7"value="d"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question8" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question8"value="b"><br/><br/>
-		Answer C <input type="radio" name="question8"value="c"><br/><br/>
-		Answer D <input type="radio" name="question8"value="d"><br/><br/>
+		
+		<strong>Which Video Game would you rather Play?</strong><br/><br/>
+		<img src="Q2Images/overwatch.jpg"><br/><br/> Overwatch <input type="radio" name="question8"value="d"><br/><br/>
+		<img src="Q2Images/ssb4.jpg" height=500 width=700><br/><br/> Super Smash Bros. <input type="radio" name="question8"value="a"><br/><br/>
+		<img src="Q2Images/pokemonGame.jpg"><br/><br/> Pokemon <input type="radio" name="question8"value="b"><br/><br/>
+		<img src="Q2Images/ff.jpg"><br/><br/> Final Fantasy <input type="radio" name="question8"value="c"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question9" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question9"value="b"><br/><br/>
-		Answer C <input type="radio" name="question9"value="c"><br/><br/>
-		Answer D <input type="radio" name="question9"value="d"><br/><br/>
+		<strong>Which takes you back to your Childhood?</strong><br/><br/>
+		<img src="Q2Images/dragonBall.jpg"><br/><br/> Dragon Ball <input type="radio" name="question9"value="d"><br/><br/>
+		<img src="Q2Images/pokemonShow.jpg"><br/><br/> Pokemon <input type="radio" name="question9"value="a"><br/><br/>
+		<img src="Q2Images/digimon.jpg"><br/><br/> Digimon <input type="radio" name="question9"value="c"><br/><br/>
+		<img src="Q2Images/sailorMoon.jpg"><br/><br/> Sailor Moon <input type="radio" name="question9"value="b"><br/><br/>
 		<br/><br/><br/><br/>
 		
-		<img src="" alt="Q Image"><br/><br/>
-		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question10" checked value="a"><br/><br/>
-		Answer B <input type="radio" name="question10"value="b"><br/><br/>
-		Answer C <input type="radio" name="question10"value="c"><br/><br/>
-		Answer D <input type="radio" name="question10"value="d"><br/><br/>
+		<img src="Q2Images/job.jpg" alt="Q Image"><br/><br/>
+		<strong>Where would you Love to Work?</strong><br/><br/>
+		Google <input type="radio" name="question10"value="b"><br/><br/>
+		Facebook<input type="radio" name="question10"value="a"><br/><br/>
+		Apple <input type="radio" name="question10"value="d"><br/><br/>
+		Have Your Own Startup <input type="radio" name="question10"value="c"><br/><br/>
 		<br/><br/>
+		
+		<strong>Name: </strong><input type="text" id="name" name="name" placeholder="Your Name" required/><br/><br/>
+		Email to Send Results to (Optional): <input type="email" id="email" name="email"/><br/><br/><br/>
+		
 		<input type="submit" value = "Calculate Your Results">
-	</form> 
+		<input type="hidden" name="result" id="result"/>
+		
+	</form>
+	<form action="Homepage.html" method="post">
+		<input type="submit" value = "Home">
+	</form>
 	<div id="results"></div>
 	<script>
+		//a is Gamer, b is Book Nerd, c is Computer/Tech Nerd, d is Movie/Comic Nerd
 		let aBucket = 0;
 		let bBucket = 0;
 		let cBucket = 0;
 		let dBucket = 0;
 		
 		function main() {
+			/*
+			 *	Validation Section
+			 */
+			let err = "";
+			err += addErrorMessage("question1");
+			err += addErrorMessage("question2");
+			err += addErrorMessage("question3");
+			err += addErrorMessage("question4");
+			err += addErrorMessage("question5");
+			err += addErrorMessage("question6");
+			err += addErrorMessage("question7");
+			err += addErrorMessage("question8");
+			err += addErrorMessage("question9");
+			err += addErrorMessage("question10");
+			
+			let name = document.getElementById("name").value.trim();
+			if (name === "" || !isNaN(parseFloat(name))) {
+				err += "Invalid Name Given";
+			}
+			
+			if (err !== "") {
+				alert(err);
+				return false;
+			}
+			
+			
+			/*
+			 *	Calculating Results
+			 */
 			addResult("question1");
 			addResult("question2");
 			addResult("question3");
@@ -108,14 +145,15 @@
 			addResult("question10");
 			max = maxBucket();
 			
+			let x = document.getElementById("result");
 			if (max == aBucket) {
-				document.writeln("(A) got the most votes with "+aBucket);
+				x.setAttribute("value", "A");
 			} else if (max == bBucket) {
-				document.writeln("(B) got the most votes with "+bBucket);
+				x.setAttribute("value", "B");
 			} else if (max == cBucket) {
-				document.writeln("(C) got the most votes with "+cBucket);
+				x.setAttribute("value", "C");
 			} else if (max == dBucket) {
-				document.writeln("(D) got the most votes with "+dBucket);
+				x.setAttribute("value", "D");
 			}
 			
 		}
@@ -142,6 +180,53 @@
 			let maxAB = (aBucket >= bBucket ? aBucket : bBucket);
 			let maxCD = (cBucket >= dBucket ? cBucket : dBucket);
 			return maxAB >= maxCD ? maxAB : maxCD;
+		}
+		
+		function notSelected(question) {
+			let answer = document.querySelector('input[name="'+question+'"]:checked');
+			return (answer === null);
+		}
+		
+		function addErrorMessage(question) {
+			if (notSelected(question)) {
+				let q = "";
+				switch(question) {
+					case "question1":
+						q += "Question 1";
+						break;
+					case "question2":
+						q += "Question 2";
+						break;
+					case "question3":
+						q += "Question 3";
+						break;
+					case "question4":
+						q += "Question 4";
+						break;
+					case "question5":
+						q += "Question 5";
+						break;
+					case "question6":
+						q += "Question 6";
+						break;
+					case "question7":
+						q += "Question 7";
+						break;
+					case "question8":
+						q += "Question 8";
+						break;
+					case "question9":
+						q += "Question 9";
+						break;
+					case "question10":
+						q += "Question 10";
+						break;
+				}
+				return q+" was NOT Answered!\n";
+			}
+			else {
+				return "";
+			}
 		}
 	</script>
 </body>
