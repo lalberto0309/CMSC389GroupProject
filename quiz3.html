@@ -81,10 +81,10 @@
 		<img src="Images/q3images/tapping.gif" alt="Q Image"><br/><br/>
 		<h3>You need to open another file, what hotkey are you pressing?</h3>
 		<div class="container-fluid">
-			<input type="radio" name="question5"value="c"> Shift + Shift<br/>
+			<input type="radio" name="question5"value="c"> <kbd> Shift + Shift </kbd><br/>
 			<input type="radio" name="question5"value="b"> I start typing in the search bar<br/>
-			<input type="radio" name="question5"value="a"> Ctrl + P <br/>
-			<input type="radio" name="question5"value="d">WHAT DO YOU MEAN, I JUST MOVE MY MOUSE TO FILE > OPEN FILE<br/> 
+			<input type="radio" name="question5"value="a"> <kbd>Ctrl + P </kbd><br/>
+			<input type="radio" name="question5"value="d"> WHAT DO YOU MEAN, I JUST MOVE MY MOUSE TO FILE > OPEN FILE<br/> 
 		</div>
 
 		<br/><br/>
@@ -137,7 +137,7 @@
 			addResult("question6");
 			max = maxBucket();
 			
-			let x = document.getElementById("results");
+			let x = document.getElementById("result");
 			if (max == aBucket) {
 				x.setAttribute("value", "A");
 			} else if (max == bBucket) {
