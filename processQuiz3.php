@@ -16,7 +16,6 @@
 	$body .= "</form>";
 
     
-    
     $page = generatePage($body);
 	echo $page;
     
