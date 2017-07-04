@@ -2,87 +2,121 @@
 <head>
     <meta charset="utf-8" />
     <title>Quiz 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="quizstyle.css" type="text/css" />
 </head>
 
-<body style="text-align: center;">
-	<h1><strong><u>What Kind Of NERD Are You?</u></strong></h1>
+<nav class="navbar navbar-inverse" style="background-color: red">
+  <div class="navbar-header">
+  	<a class="navbar-brand" href="Homepage.html" style="color: white"><u>FizzBuzzFeed</u></a>
+  </div>
+</nav>
+
+<body>
+	<h1 class="text-center display-1">What Kind Of NERD Are You?</h1><br/><br/>
 	<form onsubmit="return main()" action="processQuiz2.php" method="post">
-		<img src="Q2Images/fridayNight.jpg" alt="Q Image"><br/><br/>
-		<strong>It's Friday Night!! What's your ideal night?</strong><br/><br/>
-		Let's Go Clubbing! And Dance the Night Away!! <input type="radio" name="question1"value="d"><br/><br/>
-		Living up the Night at House Party! <input type="radio" name="question1"value="c"><br/><br/>
-		Game Night, Have some friends over for Board Games and Video Games<input type="radio" name="question1"value="a"><br/><br/>
-		Hot Date Tonight! Just Me, my Bed, and my Laptop <input type="radio" name="question1"value="b"><br/><br/>
+		
+		<img src="Q2Images/fridayNight.gif" alt="Q Image" style="text-align: center" height=350 width=650><br/><br/>
+		<h3>It's Friday Night!! What's your ideal night?</h3><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question1"value="d"> Let's Go Clubbing! And Dance the Night Away!! <br/><br/>
+			<input type="radio" name="question1"value="c"> Living up the Night at House Party! <br/><br/>
+			<input type="radio" name="question1"value="a"> Game Night, Have some friends over for Board Games and Video Games<br/><br/>
+			<input type="radio" name="question1"value="b"> Hot Date Tonight! Just Me, my Bed, and my Laptop <br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<img src="Q2Images/food.jpg" alt="Q Image"><br/><br/>
-		<strong>You're too lazy to make dinner...Where do you go dine?</strong><br/><br/>
-		Burger Place <input type="radio" name="question2"value="c"><br/><br/>
-		Chipotle <input type="radio" name="question2"value="d"><br/><br/>
-		Sushi Restaurant <input type="radio" name="question2"value="b"><br/><br/>
-		Order some Pizza....I was lazy for a reason! <input type="radio" name="question2"value="a"><br/><br/>
+		<img src="Q2Images/food.jpg" alt="Q Image" height=350 width=650><br/><br/>
+		<h3>You're too lazy to make dinner...Where do you go dine?</h3><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question2"value="c"> Burger Place <br/><br/>
+			<input type="radio" name="question2"value="d"> Chipotle <br/><br/>
+			<input type="radio" name="question2"value="b"> Sushi Restaurant <br/><br/>
+			<input type="radio" name="question2"value="a"> Order some Pizza....I was lazy for a reason! <br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<strong>Which of these characters makes you the Happiest?</strong><br/><br/>
-		<img src="Q2Images/spiderman.jpg"><br/><br/> Spider-Man <input type="radio" name="question3"value="c"><br/><br/>
-		<img src="Q2Images/mario.jpg" height=600 width=500><br/><br/> Mario <input type="radio" name="question3"value="a"><br/><br/>
-		<img src="Q2Images/harryPotter.jpg"><br/><br/> Harry Potter <input type="radio" name="question3"value="b"><br/><br/>
-		<img src="Q2Images/batman.jpg"><br/><br/> Batman <input type="radio" name="question3"value="d"><br/><br/>
+		<h3>Which of these characters makes you the Happiest?</h3>
+		<img src="Q2Images/spiderman.jpg" height=350 width=240><img src="Q2Images/mario.jpg" height=350 width=240><img src="Q2Images/harryPotter1.jpg" height=350 width=240><img src="Q2Images/batman.jpg" height=350 width=240><br/><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question3"value="c"> Spider-Man<br/><br/>
+			<input type="radio" name="question3"value="a"> Mario <br/><br/>
+			<input type="radio" name="question3"value="b"> Harry Potter<br/><br/>
+			<input type="radio" name="question3"value="d"> Batman<br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<img src="Q2Images/coding.jpg" alt="Q Image"><br/><br/>
-		<strong>Which Programming Language do you prefer?</strong><br/><br/>
-		Java <input type="radio" name="question4"value="c"><br/><br/>
-		Javascript <input type="radio" name="question4"value="d"><br/><br/>
-		C <input type="radio" name="question4"value="b"><br/><br/>
-		Python <input type="radio" name="question4"value="a"><br/><br/>
+		<img src="Q2Images/coding.jpg" alt="Q Image" height=350 width=650><br/><br/>
+		<h3>Which Programming Language do you prefer?</h3><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question4"value="c"> Java<br/><br/>
+			<input type="radio" name="question4"value="d"> Javascript <br/><br/>
+			<input type="radio" name="question4"value="b"> C <br/><br/>
+			<input type="radio" name="question4"value="a"> Python <br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<img src="Q2Images/houseParty.jpg" alt="Q Image"><br/><br/>
-		<strong>You're at a Party, What are you Most Likely Doing?</strong><br/><br/>
-		Eating whatever Food is Available <input type="radio" name="question5"value="c"><br/><br/>
-		Drunk!! Don't care how you're getting Home! <input type="radio" name="question5"value="a"><br/><br/>
-		Dancing! <input type="radio" name="question5"value="d"><br/><br/>
-		Regretting ever leaving your bed... <input type="radio" name="question5"value="b"><br/><br/>
+		<img src="Q2Images/houseParty.gif" alt="Q Image" height=350 width=650><br/><br/>
+		<h3>You're at a Party, What are you Most Likely Doing?</h3><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question5"value="c"> Eating whatever Food is Available <br/><br/>
+			<input type="radio" name="question5"value="a"> Drunk!! Don't care how you're getting Home! <br/><br/>
+			<input type="radio" name="question5"value="d"> Dancing! <br/><br/>
+			<input type="radio" name="question5"value="b"> Regretting ever leaving your bed... <br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<img src="Q2Images/netflix.jpg" alt="Q Image"><br/><br/>
-		<strong>Let's Netflix and Chill...GET YOUR MIND OUT OF THE GUTTER...What are you watching?</strong><br/><br/>
-		House of Cards <input type="radio" name="question6"value="b"><br/><br/>
-		Stranger Things <input type="radio" name="question6"value="a"><br/><br/>
-		13 Reasons Why <input type="radio" name="question6"value="d"><br/><br/>
-		Orange is the New Black <input type="radio" name="question6"value="c"><br/><br/>
+		<img src="Q2Images/netflix.jpg" alt="Q Image" height=350 width=650><br/><br/>
+		<h3>Let's Netflix and Chill...GET YOUR MIND OUT OF THE GUTTER...What are you watching?</h3><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question6"value="b"> House of Cards<br/><br/>
+			<input type="radio" name="question6"value="a"> Stranger Things<br/><br/>
+			<input type="radio" name="question6"value="d"> 13 Reasons Why<br/><br/>
+			<input type="radio" name="question6"value="c"> Orange is the New Black<br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<img src="Q2Images/seasons.jpg" alt="Q Image"><br/><br/>
-		<strong>Which Season do you prefer?</strong><br/><br/>
-		Spring <input type="radio" name="question7"value="b"><br/><br/>
-		Summer <input type="radio" name="question7"value="a"><br/><br/>
-		Fall <input type="radio" name="question7"value="c"><br/><br/>
-		Winter <input type="radio" name="question7"value="d"><br/><br/>
+		<img src="Q2Images/seasons.jpg" alt="Q Image" height=350 width=650><br/><br/>
+		<h3>Which Season do you prefer?</h3><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question7"value="b"> Spring<br/><br/>
+			<input type="radio" name="question7"value="a"> Summer<br/><br/>
+			<input type="radio" name="question7"value="c"> Fall<br/><br/>
+			<input type="radio" name="question7"value="d"> Winter<br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
 		
-		<strong>Which Video Game would you rather Play?</strong><br/><br/>
-		<img src="Q2Images/overwatch.jpg"><br/><br/> Overwatch <input type="radio" name="question8"value="d"><br/><br/>
-		<img src="Q2Images/ssb4.jpg" height=500 width=700><br/><br/> Super Smash Bros. <input type="radio" name="question8"value="a"><br/><br/>
-		<img src="Q2Images/pokemonGame.jpg"><br/><br/> Pokemon <input type="radio" name="question8"value="b"><br/><br/>
-		<img src="Q2Images/ff.jpg"><br/><br/> Final Fantasy <input type="radio" name="question8"value="c"><br/><br/>
+		<h3>Which Video Game would you rather Play?</h3>
+		<img src="Q2Images/overwatch.jpg" height=350 width=240><img src="Q2Images/ssb41.jpg" height=350 width=240><img src="Q2Images/pokemonGame1.jpg" height=350 width=240><img src="Q2Images/ff.jpg" height=350 width=240><br/><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question8"value="d"> Overwatch<br/><br/>
+			<input type="radio" name="question8"value="a"> Super Smash Bros.<br/><br/>
+			<input type="radio" name="question8"value="b"> Pokemon<br/><br/>
+			<input type="radio" name="question8"value="c"> Final Fantasy<br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<strong>Which takes you back to your Childhood?</strong><br/><br/>
-		<img src="Q2Images/dragonBall.jpg"><br/><br/> Dragon Ball <input type="radio" name="question9"value="d"><br/><br/>
-		<img src="Q2Images/pokemonShow.jpg"><br/><br/> Pokemon <input type="radio" name="question9"value="a"><br/><br/>
-		<img src="Q2Images/digimon.jpg"><br/><br/> Digimon <input type="radio" name="question9"value="c"><br/><br/>
-		<img src="Q2Images/sailorMoon.jpg"><br/><br/> Sailor Moon <input type="radio" name="question9"value="b"><br/><br/>
+		<h3>Which takes you back to your Childhood?</h3>
+		<img src="Q2Images/dragonBall1.jpg" height=350 width=240><img src="Q2Images/pokemonShow.jpg" height=350 width=240><img src="Q2Images/digimon.jpg" height=350 width=240><img src="Q2Images/sailorMoon1.jpg" height=350 width=240><br/><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question9"value="d"> Dragon Ball <br/><br/>
+			<input type="radio" name="question9"value="a"> Pokemon <br/><br/>
+			<input type="radio" name="question9"value="c"> Digimon <br/><br/>
+			<input type="radio" name="question9"value="b"> Sailor Moon <br/><br/>
+		</div>
 		<br/><br/><br/><br/>
 		
-		<img src="Q2Images/job.jpg" alt="Q Image"><br/><br/>
-		<strong>Where would you Love to Work?</strong><br/><br/>
-		Google <input type="radio" name="question10"value="b"><br/><br/>
-		Facebook<input type="radio" name="question10"value="a"><br/><br/>
-		Apple <input type="radio" name="question10"value="d"><br/><br/>
-		Have Your Own Startup <input type="radio" name="question10"value="c"><br/><br/>
+		<img src="Q2Images/job.gif" alt="Q Image" height=350 width=650><br/><br/>
+		<h3>Where would you LOVE to Work?</h3><br/>
+		<div class="container-fluid">
+			<input type="radio" name="question10"value="b"> Google <br/><br/>
+			<input type="radio" name="question10"value="a"> Facebook <br/><br/>
+			<input type="radio" name="question10"value="d"> Apple <br/><br/>
+			<input type="radio" name="question10"value="c"> Have Your Own Startup <br/><br/>
+		</div>
 		<br/><br/>
 		
 		<strong>Name: </strong><input type="text" id="name" name="name" placeholder="Your Name" required/><br/><br/>
@@ -91,9 +125,6 @@
 		<input type="submit" value = "Calculate Your Results">
 		<input type="hidden" name="result" id="result"/>
 		
-	</form>
-	<form action="Homepage.html" method="post">
-		<input type="submit" value = "Home">
 	</form>
 	<div id="results"></div>
 	<script>
