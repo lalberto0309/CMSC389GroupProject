@@ -1,15 +1,15 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Quiz 3</title>
+    <title>FizzBuzzFeed: Which CMSC389N Editor Are You?</title>
 </head>
 
 <body>
-	<h1><strong><u>Quiz 3</u></strong></h1>
-	<form onsubmit="return main()">
+	<h1><strong><u>Which CMSC389N Editor Are You?</u></strong></h1>
+	<form onsubmit="return main()" action="processQuiz.php" method="post">
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question1" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question1"value="a"><br/><br/>
 		Answer B <input type="radio" name="question1"value="b"><br/><br/>
 		Answer C <input type="radio" name="question1"value="c"><br/><br/>
 		Answer D <input type="radio" name="question1"value="d"><br/><br/>
@@ -17,7 +17,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question2" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question2"value="a"><br/><br/>
 		Answer B <input type="radio" name="question2"value="b"><br/><br/>
 		Answer C <input type="radio" name="question2"value="c"><br/><br/>
 		Answer D <input type="radio" name="question2"value="d"><br/><br/>
@@ -25,7 +25,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question3" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question3"value="a"><br/><br/>
 		Answer B <input type="radio" name="question3"value="b"><br/><br/>
 		Answer C <input type="radio" name="question3"value="c"><br/><br/>
 		Answer D <input type="radio" name="question3"value="d"><br/><br/>
@@ -33,7 +33,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question4" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question4"value="a"><br/><br/>
 		Answer B <input type="radio" name="question4"value="b"><br/><br/>
 		Answer C <input type="radio" name="question4"value="c"><br/><br/>
 		Answer D <input type="radio" name="question4"value="d"><br/><br/>
@@ -41,7 +41,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question5" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question5"value="a"><br/><br/>
 		Answer B <input type="radio" name="question5"value="b"><br/><br/>
 		Answer C <input type="radio" name="question5"value="c"><br/><br/>
 		Answer D <input type="radio" name="question5"value="d"><br/><br/>
@@ -49,7 +49,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question6" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question6"value="a"><br/><br/>
 		Answer B <input type="radio" name="question6"value="b"><br/><br/>
 		Answer C <input type="radio" name="question6"value="c"><br/><br/>
 		Answer D <input type="radio" name="question6"value="d"><br/><br/>
@@ -57,7 +57,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question7" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question7"value="a"><br/><br/>
 		Answer B <input type="radio" name="question7"value="b"><br/><br/>
 		Answer C <input type="radio" name="question7"value="c"><br/><br/>
 		Answer D <input type="radio" name="question7"value="d"><br/><br/>
@@ -65,7 +65,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question8" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question8"value="a"><br/><br/>
 		Answer B <input type="radio" name="question8"value="b"><br/><br/>
 		Answer C <input type="radio" name="question8"value="c"><br/><br/>
 		Answer D <input type="radio" name="question8"value="d"><br/><br/>
@@ -73,7 +73,7 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question9" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question9"value="a"><br/><br/>
 		Answer B <input type="radio" name="question9"value="b"><br/><br/>
 		Answer C <input type="radio" name="question9"value="c"><br/><br/>
 		Answer D <input type="radio" name="question9"value="d"><br/><br/>
@@ -81,12 +81,18 @@
 		
 		<img src="" alt="Q Image"><br/><br/>
 		[Question Text?]<br/><br/>
-		Answer A <input type="radio" name="question10" checked value="a"><br/><br/>
+		Answer A <input type="radio" name="question10"value="a"><br/><br/>
 		Answer B <input type="radio" name="question10"value="b"><br/><br/>
 		Answer C <input type="radio" name="question10"value="c"><br/><br/>
 		Answer D <input type="radio" name="question10"value="d"><br/><br/>
 		<br/><br/>
+		
+		<strong>Name: </strong><input type="text" id="name" name="name" placeholder="Your Name" required/><br/><br/>
+		Email to Send Results to (Optional): <input type="email" id="email" name="email"/><br/><br/><br/>
+		
 		<input type="submit" value = "Calculate Your Results">
+		<input type="hidden" name="result" id="result"/>
+		
 	</form> 
 	<div id="results"></div>
 	<script>
@@ -96,6 +102,35 @@
 		let dBucket = 0;
 		
 		function main() {
+			/*
+			 *	Validation Section
+			 */
+			let err = "";
+			err += addErrorMessage("question1");
+			err += addErrorMessage("question2");
+			err += addErrorMessage("question3");
+			err += addErrorMessage("question4");
+			err += addErrorMessage("question5");
+			err += addErrorMessage("question6");
+			err += addErrorMessage("question7");
+			err += addErrorMessage("question8");
+			err += addErrorMessage("question9");
+			err += addErrorMessage("question10");
+			
+			let name = document.getElementById("name").value.trim();
+			if (name === "" || !isNaN(parseFloat(name))) {
+				err += "Invalid Name Given";
+			}
+			
+			if (err !== "") {
+				alert(err);
+				return false;
+			}
+			
+			
+			/*
+			 *	Calculating Results
+			 */
 			addResult("question1");
 			addResult("question2");
 			addResult("question3");
@@ -108,14 +143,15 @@
 			addResult("question10");
 			max = maxBucket();
 			
+			let x = document.getElementById("results");
 			if (max == aBucket) {
-				document.writeln("(A) got the most votes with "+aBucket);
+				x.setAttribute("value", "A");
 			} else if (max == bBucket) {
-				document.writeln("(B) got the most votes with "+bBucket);
+				x.setAttribute("value", "B");
 			} else if (max == cBucket) {
-				document.writeln("(C) got the most votes with "+cBucket);
+				x.setAttribute("value", "C");
 			} else if (max == dBucket) {
-				document.writeln("(D) got the most votes with "+dBucket);
+				x.setAttribute("value", "D");
 			}
 			
 		}
@@ -142,6 +178,53 @@
 			let maxAB = (aBucket >= bBucket ? aBucket : bBucket);
 			let maxCD = (cBucket >= dBucket ? cBucket : dBucket);
 			return maxAB >= maxCD ? maxAB : maxCD;
+		}
+		
+		function notSelected(question) {
+			let answer = document.querySelector('input[name="'+question+'"]:checked');
+			return (answer === null);
+		}
+		
+		function addErrorMessage(question) {
+			if (notSelected(question)) {
+				let q = "";
+				switch(question) {
+					case "question1":
+						q += "Question 1";
+						break;
+					case "question2":
+						q += "Question 2";
+						break;
+					case "question3":
+						q += "Question 3";
+						break;
+					case "question4":
+						q += "Question 4";
+						break;
+					case "question5":
+						q += "Question 5";
+						break;
+					case "question6":
+						q += "Question 6";
+						break;
+					case "question7":
+						q += "Question 7";
+						break;
+					case "question8":
+						q += "Question 8";
+						break;
+					case "question9":
+						q += "Question 9";
+						break;
+					case "question10":
+						q += "Question 10";
+						break;
+				}
+				return q+" was NOT Answered!\n";
+			}
+			else {
+				return "";
+			}
 		}
 	</script>
 </body>
