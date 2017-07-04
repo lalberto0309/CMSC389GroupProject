@@ -1,3 +1,7 @@
-.container-fluid {
+.container-fluid, .container {
 	background-color: #f5f5f5;
+}
+
+.result-paragraph{
+	background-color:#f5f5f5;
 }
