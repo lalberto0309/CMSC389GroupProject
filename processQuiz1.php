@@ -36,16 +36,16 @@ EOPAGE;
         $txt = "<p class='result-paragraph'><strong>$name, <br></strong>";
         switch($value) {
             case "A":
-                $txt .= "";
+                $txt .= "You got: Binary Maestro";
                 break;
             case "B":
-                $txt .= "";
+                $txt .= "You got: Code Crusader";
                 break;
             case "C":
-                $txt .= "";
+                $txt .= "You got: [Empty]";
                 break;
             case "D":
-                $txt .= "";
+                $txt .= "You got: Contemptible Exception";
                 break;
         }
         $txt .= "</p>";
